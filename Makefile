@@ -20,7 +20,7 @@ wasm:
 
 asm:
 	$(CC) yoga/yoga/*.cpp bindings/*.cc \
-		--bind -Os --memory-init-file 0 --llvm-lto 1 \
+		--bind -O0 --memory-init-file 0 --llvm-lto 1 \
 		-Iyoga \
 		-s WASM=0 \
 		-s ENVIRONMENT='shell,web' \

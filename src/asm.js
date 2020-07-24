@@ -6,7 +6,7 @@ function bind(name, proto) {
 }
 
 function init() {
-  const task = emscripten().then(raw => Object.assign(mod, entry(bind, raw)));
+  const task = emscripten().then((raw) => Object.assign(mod, entry(bind, raw)));
   mod.init = () => task;
   return task;
 }
